@@ -1,0 +1,15 @@
+What were the inputs you gave the simulation? (Population size, percent vaccinated, virus name, mortality rate, basic reproductive rate)
+
+100000 People  -  90% Percent Vaccinated  - Name: The Cooties Virus  - Mortality rate:  5%   0.16 - 10
+
+What percentage of the population became infected at some point before the virus burned out?
+
+6.4%. Vaccination helps
+
+What percentage of the population died from the virus?
+
+~.3%
+
+Out of all interactions sick individuals had during the entire simulation, how many total interactions did we see where a vaccination saved a person from potentially becoming infected?
+
+604,891

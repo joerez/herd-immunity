@@ -54,31 +54,31 @@ class Simulation(object):
 
     def __init__(self, population_size, vacc_percentage, virus_name,
                  mortality_rate, basic_repro_num, initial_infected=1):
-        self.population_size = population_size
-        self.population = []
-        self.total_infected = 0
-        self.current_infected = 0
-        self.next_person_id = 0
-        self.virus_name = virus_name
-        self.mortality_rate = mortality_rate
-        self.basic_repro_num = basic_repro_num
-        self.file_name = "{}_simulation_pop_{}_vp_{}_infected_{}.txt".format(
-            virus_name, population_size, vacc_percentage, initial_infected)
+            self.population_size = population_size
+            self.population = []
+            self.total_infected = 0
+            self.current_infected = 0
+            self.next_person_id = 0
+            self.virus_name = virus_name
+            self.mortality_rate = mortality_rate
+            self.basic_repro_num = basic_repro_num
+            self.file_name = "{}_simulation_pop_{}_vp_{}_infected_{}.txt".format(
+                virus_name, population_size, vacc_percentage, initial_infected)
 
         # TODO: Create a Logger object and bind it to self.logger.  You should use this
         # logger object to log all events of any importance during the simulation.  Don't forget
         # to call these logger methods in the corresponding parts of the simulation!
-        self.logger = Logger(self)
+            self.logger = Logger(self)
 
         # This attribute will be used to keep track of all the people that catch
         # the infection during a given time step. We'll store each newly infected
         # person's .ID attribute in here.  At the end of each time step, we'll call
         # self._infect_newly_infected() and then reset .newly_infected back to an empty
         # list.
-        self.newly_infected = []
+            self.newly_infected = []
         # TODO: Call self._create_population() and pass in the correct parameters.
         # Store the array that this method will return in the self.population attribute.
-        self.population = self._create_population(population_size, initial_infected)
+            self.population = self._create_population(population_size, initial_infected)
 
     def _create_population(self, initial_infected):
         # TODO: Finish this method!  This method should be called when the simulation
@@ -128,9 +128,8 @@ class Simulation(object):
         #     - There are no infected people left in the population.
         # In all other instances, the simulation should continue.
         for person in self.population:
-
-        if person.is_alive and not person.is_vaccinated:
-            return True
+            if person.is_alive and not person.is_vaccinated:
+                return True
         return False
 
 
