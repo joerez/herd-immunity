@@ -61,3 +61,11 @@ class Person(object):
         return True
 
         pass
+
+
+    def testing():
+        person = Person(400, False)
+        assert person._id is 400
+        assert person.is_vaccinated is False
+        assert person.is_alive is True
+        assert person.infection is False
